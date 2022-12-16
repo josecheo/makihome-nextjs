@@ -4,14 +4,14 @@ import sushiBanner from "../public/assets/sushi-748139_1920.jpg";
 import sushiBanner2 from "../public/assets/sushi-2942101_1920.jpg";
 import sushiBanner3 from "../public/assets/bannersushi3.png";
 
-const HeadTags = dynamic(() => import("./components/HeadTags"), {
+const HeadTags = dynamic(() => import("../components/HeadTags"), {
   suspense: true,
 });
 
-const Header = dynamic(() => import("./components/header"), {
+const Header = dynamic(() => import("../components/header"), {
   suspense: true,
 });
-const CaruselImage = dynamic(() => import("./components/carusel"), {
+const CaruselImage = dynamic(() => import("../components/carusel"), {
   suspense: true,
 });
 
@@ -34,8 +34,7 @@ export default function Home() {
         description="Sushi delivery."
       />
       <Header />
-      <CaruselImage images={images} onChange={() => {}} imgNumber={0} />
-    
+      <CaruselImage images={images} imgNumber={0} />
     </Suspense>
   );
 }

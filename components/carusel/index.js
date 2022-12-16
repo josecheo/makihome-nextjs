@@ -1,12 +1,11 @@
 import React from "react";
 import Carousel from "nuka-carousel";
 import Image from "next/image";
-//Material UI
+
 import { Box, Button } from "@mui/material";
 
-// eslint-disable-next-line complexity
-export default function CaruselImage({ images, onChange, imgNumber }) {
-  const slides = images.map((image, index) => (
+export default function CaruselImage({ images, imgNumber }) {
+  const slides = images?.map((image, index) => (
     <Box
       key={index}
       sx={{
@@ -15,7 +14,7 @@ export default function CaruselImage({ images, onChange, imgNumber }) {
       }}
     >
       <Image
-        src={image.thumbnail}
+        src={image?.thumbnail}
         alt="product"
         layout="fill"
         objectFit="cover"

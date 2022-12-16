@@ -14,7 +14,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PersonIcon from "@mui/icons-material/Person";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import LogoSushiTeam from "../../../public/assets/LogoSushiTeam.svg";
+import LogoSushiTeam from "../../public/assets/LogoSushiTeam.svg";
 import Image from "next/image";
 
 import useStyles from "./styles";

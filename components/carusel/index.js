@@ -1,17 +1,16 @@
 import React from "react";
 import Carousel from "nuka-carousel";
 import Image from "next/image";
-
 import { Box, Button } from "@mui/material";
+import useStyles from "./styles";
 
 export default function CaruselImage({ images, imgNumber }) {
+  const classes = useStyles();
+
   const slides = images?.map((image, index) => (
     <Box
       key={index}
-      sx={{
-        height: "calc(100vh - 145px)",
-        position: "relative",
-      }}
+      className={classes.wrapperSlides}
     >
       <Image
         src={image?.thumbnail}
@@ -23,45 +22,22 @@ export default function CaruselImage({ images, imgNumber }) {
   ));
 
   return (
-    <Box
-      sx={{
-        marginTop: "145px",
-        position: "relative",
-      }}
-    >
-      <Box sx={{ zIndex: "6000", position: "absolute", bottom:"15%", left:"40%", right:"35%" }}>
+    <Box className={classes.wrapperImg}>
+      <Box className={classes.groupButtons}>
         <Button
+          className={classes.button}
           variant="contained"
           color="secondary"
           onClick={() => {}}
-          sx={{
-            color: "#fff",
-            fontWeight: "bold",
-            textAlign: "center",
-            fontSize: "12px",
-            textTransform: "none",
-            height: "48px",
-            borderRadius: "24px",
-            width: "183px",
-          }}
+          sx={{}}
         >
           Realizar Pedido
         </Button>
 
         <Button
           variant="contained"
+          className={classes.button}
           onClick={() => {}}
-          sx={{
-            color: "#fff",
-            fontWeight: "bold",
-            textAlign: "center",
-            fontSize: "12px",
-            textTransform: "none",
-            height: "48px",
-            borderRadius: "24px",
-            width: "183px",
-            marginLeft:"20px"
-          }}
         >
           Combos del dia
         </Button>
